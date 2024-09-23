@@ -1,0 +1,141 @@
+@import "./$colors.scss";
+@import "./$fonts.scss";
+* {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    text-decoration: none;
+    font-family: sans;
+    
+    
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    width: 100%;
+    background: radial-gradient($color_B,$color_E,);
+
+    min-height: 100vh;
+}
+
+header {
+    @extend .center;
+
+    width: 100%;
+    padding-top: 2em;
+
+
+    justify-content: space-between;
+
+    text-transform: lowercase;
+
+}
+header nav{
+
+    display: flex;
+    gap: 16px;
+    right: 6em;
+
+    
+    a{
+        display: block;
+        padding: 8px;
+   
+      
+    
+     
+        color: white;
+        font-family:roboto;
+        font-weight: bolder;
+    }
+}
+header span{
+    
+    
+    img{
+        filter: drop-shadow(0 1px 10px  rgba(0, 0, 0, 0.462));
+        
+    }
+    h1{
+        @extend .center;
+       
+        font-size: 16px;
+        padding: 16px;
+        border-top-right-radius: 4em;
+        border-bottom-right-radius: 4em;
+        height: 32px;
+        background:$color_B;
+        color: $color_E;
+        font-weight: normal;
+        
+    }
+}
+
+main{
+
+    @extend .center;
+
+    height: 80vh;
+    width: 100%;
+
+
+    section{
+
+   
+        height: 70vh;
+        width: 70%;
+    }
+
+}
+#home{
+
+
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+
+
+
+
+.intro-text{
+    
+  
+
+
+
+    h1{
+        font-size: 4rem;
+        color: $color_C;
+
+    }
+
+    p{
+        text-align: justify;
+        word-break: break-all;
+        width: 30%;
+        color: $color_E;
+    }
+}
+
+
+.self-logo{
+    @extend .center;
+
+    img{
+
+        width: 120px;
+        filter: drop-shadow(0 11px 9px $color_E);
+    }
+
+
+
+}
+
+
+
+}

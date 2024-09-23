@@ -1,0 +1,97 @@
+@font-face {
+  font-family: roboto;
+  src: url("./../assets/font/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: pixel;
+  src: url("./../assets/font/Handjet-VariableFont_ELGR,ELSH,wght.ttf");
+}
+@font-face {
+  font-family: sans;
+  src: url("./../assets/font/OpenSans-VariableFont_wdth,wght.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  text-decoration: none;
+  font-family: sans;
+}
+
+.center, #home .self-logo, main, header span h1, header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  width: 100%;
+  background: radial-gradient(rgb(174, 174, 174), rgb(104, 99, 99));
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  padding-top: 2em;
+  justify-content: space-between;
+  text-transform: lowercase;
+}
+
+header nav {
+  display: flex;
+  gap: 16px;
+  right: 6em;
+}
+header nav a {
+  display: block;
+  padding: 8px;
+  color: white;
+  font-family: roboto;
+  font-weight: bolder;
+}
+
+header span img {
+  filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.462));
+}
+header span h1 {
+  font-size: 16px;
+  padding: 16px;
+  border-top-right-radius: 4em;
+  border-bottom-right-radius: 4em;
+  height: 32px;
+  background: rgb(174, 174, 174);
+  color: rgb(104, 99, 99);
+  font-weight: normal;
+}
+
+main {
+  height: 80vh;
+  width: 100%;
+}
+main section {
+  height: 70vh;
+  width: 70%;
+}
+
+#home {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#home .intro-text h1 {
+  font-size: 4rem;
+  color: rgb(67, 59, 59);
+}
+#home .intro-text p {
+  text-align: justify;
+  word-break: break-all;
+  width: 30%;
+  color: rgb(104, 99, 99);
+}
+#home .self-logo img {
+  width: 120px;
+  filter: drop-shadow(0 11px 9px rgb(104, 99, 99));
+}
+
+/*# sourceMappingURL=style.css.map */
