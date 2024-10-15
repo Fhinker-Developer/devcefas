@@ -1,141 +1,283 @@
 @import "./$colors.scss";
 @import "./$fonts.scss";
+
+//execute sass sass -w ./index.scss:./style.css
 * {
     padding: 0;
     margin: 0;
     position: relative;
     text-decoration: none;
     font-family: sans;
-    
-    
+    box-sizing: content-box;
+
+
 }
 
-.center{
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-body {
-    width: 100%;
-    background: radial-gradient($color_B,$color_E,);
 
-    min-height: 100vh;
+body {
+
+    @extend .center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+    background: $color-gray-dark;
 }
 
 header {
-    @extend .center;
 
-    width: 100%;
-    padding-top: 2em;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: $color-white;
 
 
-    justify-content: space-between;
+    z-index: 1;
+
+
 
     text-transform: lowercase;
 
-}
-header nav{
 
-    display: flex;
-    gap: 16px;
-    right: 6em;
+    .bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    
-    a{
-        display: block;
-        padding: 8px;
-   
-      
-    
-     
-        color: white;
-        font-family:roboto;
-        font-weight: bolder;
+
+
+        width: 100%;
+        height: 390px;
+
+
+
+
+
+        img {
+
+            width: 100%;
+            height: 100%;
+        }
     }
-}
-header span{
-    
-    
-    img{
-        filter: drop-shadow(0 1px 10px  rgba(0, 0, 0, 0.462));
-        
-    }
-    h1{
+
+
+    nav {
+
         @extend .center;
-       
+
+        gap: 16px;
+        padding: 16px;
+
+
+        border-radius: 1rem;
+        
+        
+        a {
+         
+            font-family: roboto;
+            font-weight: bolder;
+            color: $color-gray-800;
+        }
+    }
+
+}
+
+
+.btn-mode {
+    transition: 0.4s linear;
+    border: 0;
+
+    &:hover {
+
+        scale: 0.7;
+        rotate: 360deg;
+        box-shadow: none;
+        cursor: pointer;
+    }
+}
+
+header span {
+
+
+
+
+    h1 {
+        @extend .center;
+
         font-size: 16px;
         padding: 16px;
         border-top-right-radius: 4em;
         border-bottom-right-radius: 4em;
         height: 32px;
-        background:$color_B;
-        color: $color_E;
         font-weight: normal;
-        
+
     }
 }
 
-main{
+main {
 
     @extend .center;
+    flex-direction: column;
+    background: $color-white;
 
-    height: 80vh;
+
+    width: 70%;
+    height: 100vh;
+
+
+
+    section {
+        @extend .center;
+        flex-direction: column;
+        width: 70%;
+        z-index: 1;
+    }
+
+}
+
+#home {
+
+
+
+
+
+    .intro-text {
+
+
+        h1 {
+            font-size: 32px;
+
+            word-break: break-all;
+
+        }
+
+        h2 {
+
+            word-break: break-all;
+        }
+
+        p {
+            text-align: justify;
+            font-weight: lighter;
+            word-break: break-all;
+            width: 70%;
+
+        }
+    }
+
+
+    .self-logo {
+
+
+
+        img {
+
+            width: 64px;
+            height: 64px;
+
+            // filter: drop-shadow(0 11px 10px);
+
+
+            border-radius: 100px;
+        }
+
+
+
+    }
+
+
+
+}
+
+.container-options {
+    margin-left: 16px;
+    @extend .center;
+    gap: 8px;
+}
+
+
+.links {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    gap: 8px;
     width: 100%;
 
 
-    section{
+    h3 {
+        font-weight: lighter;
+        text-transform: lowercase;
 
-   
-        height: 70vh;
-        width: 70%;
+    }
+
+    .social-media {
+
+        display: flex;
+        gap: 8px;
+
+
+
+
+
+        a {
+            @extend .center;
+
+        }
+
     }
 
 }
-#home{
-
-
-display: flex;
-justify-content: space-around;
-align-items: center;
-flex-wrap: wrap;
 
 
 
+hr {
+    margin-top: 32px;
 
-.intro-text{
+    width: 100%;
+    border-style: groove;
+    border-color: $color-gray-600;
+    background: $color-danger;
+}
+
+@media (width < 600px) {
+
+
+    header,main{
+        width: 100%;
+    }
+
+    main{
+        section{
+            width: 90%;
+
+        }
+
     
-  
+        .intro-text{
+            
+            h1{
+                font-size: 12px;
+                color:$color-gray-700;
+            }
+            h2{
+                color:$color-gray-600;
+            }
 
-
-
-    h1{
-        font-size: 4rem;
-        color: $color_C;
-
+            p{
+                color:$color-gray-600;
+                width: 100%;
+               
+            }
+        }
     }
-
-    p{
-        text-align: justify;
-        word-break: break-all;
-        width: 30%;
-        color: $color_E;
-    }
-}
-
-
-.self-logo{
-    @extend .center;
-
-    img{
-
-        width: 120px;
-        filter: drop-shadow(0 11px 9px $color_E);
-    }
-
-
-
-}
-
-
 
 }
